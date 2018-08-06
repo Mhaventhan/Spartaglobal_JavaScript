@@ -10,12 +10,13 @@ b = parseInt(number_2);
 if (op == "+") { number_1 + number_2
   console.log(a + b);
   }
+  
 if (op == "-") { number_1 - number_2
   console.log(a - b);
-  }
+}
 if (op == "*") { number_1 * number_2
   console.log(a * b);
-  }
+}
 if (op == "/") { number_1 / number_2
   console.log(a / b);
-  }
+}
