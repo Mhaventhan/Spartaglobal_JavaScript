@@ -11,6 +11,9 @@ switch (calculator_type) {
   case "3":
     BMI();
     break;
+  case "4":
+    Trip_cal();
+    break;
 
   default:
 
@@ -81,4 +84,18 @@ function BMI(){
 
     alert(BMI_Imperial);
   }
+}
+
+// function to a Trip calculator
+function Trip_cal(){
+  var trip_info_array = prompt("Enter your distance in miles","Enter MPG","Enter cost per gallon in £:", "Enter your speed in mph");
+
+  var distance = trip_info_array[0];
+  var miles_per_gallon = trip_info_array[1];
+  var cost_per_gallon = trip_info_array[2];
+  var miles_per_hour = trip_info_array[3];
+
+
+  }
+
 }
