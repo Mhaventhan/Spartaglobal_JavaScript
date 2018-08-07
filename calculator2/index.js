@@ -8,10 +8,14 @@ switch (calculator_type) {
   case "2":
     advanced();
     break;
+  case "3":
+    BMI();
+    break;
 
   default:
 
 }
+
 
 
 
@@ -54,5 +58,27 @@ function advanced() {
     alert(Math.sqrt(number));
   }
 
+}
 
+// function to a BMI calculator either in metric or imperial
+function BMI(){
+  var BMI_Option = prompt("1)Metric or 2)Imperial")
+
+  if (BMI_Option == 1) {
+    var height = parseFloat(prompt("Enter height in cm:"))
+    var weight = parseFloat(prompt("Enter weight in kg:"))
+    var height2 = (height/100);
+    alert(weight/(height2 * height2));
+
+  }
+
+  else {
+
+    var height= parseFloat(prompt("Enter height in inches:"))
+    var weight = parseFloat(prompt("Enter weight in lbs:"))
+
+    var BMI_Imperial = (weight /(height * height)) * 703;
+
+    alert(BMI_Imperial);
+  }
 }
