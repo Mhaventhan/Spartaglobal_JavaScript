@@ -5,6 +5,10 @@ switch (calculator_type) {
   case "1":
     basic();
     break;
+  case "2":
+    advanced();
+    break;
+
   default:
 
 }
@@ -33,4 +37,22 @@ if (operator == "*")
 if (operator == "/") {
   alert(number1 / number2);
 }
+}
+// function to a Advanced calculator once the user selects option 2
+function advanced() {
+  var operator = prompt("Enter 1) Power or 2) Square root:");
+
+  if (operator == 1) {
+    var number1 = parseFloat(prompt("Enter first number:"));
+    var number2 = parseFloat(prompt("Enter second number:"));
+    alert(Math.pow(number1,number2));
+
+  }
+
+  else {
+    var number = parseFloat(prompt("Enter a number:"))
+    alert(Math.sqrt(number));
+  }
+
+
 }
