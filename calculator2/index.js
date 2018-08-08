@@ -14,8 +14,8 @@ switch (calculator_type) {
   case "4":
     Trip_cal();
     break;
-
-  default:
+default:
+alert("Please enter the right input")
 
 }
 
@@ -66,24 +66,38 @@ function advanced() {
 // function to a BMI calculator either in metric or imperial
 function BMI(){
   var BMI_Option = prompt("1)Metric or 2)Imperial")
-
   if (BMI_Option == 1) {
     var height = parseFloat(prompt("Enter height in cm:"))
     var weight = parseFloat(prompt("Enter weight in kg:"))
     var height2 = (height/100);
     alert(weight/(height2 * height2));
-
   }
-
   else {
-
     var height= parseFloat(prompt("Enter height in inches:"))
     var weight = parseFloat(prompt("Enter weight in lbs:"))
-
     var BMI_Imperial = (weight /(height * height)) * 703;
-
     alert(BMI_Imperial);
   }
 }
 
 // function to a Trip calculator
+function trip(){
+  var distance = parseFloat(prompt("Enter the distance"));
+    // fuel is for miles per gallon
+    var fuel = parseFloat(prompt("Enter fuel efficiency (mpg)"));
+    var costPerGallon = parseFloat(prompt("Enter price per gallon"));
+    var speed = parseFloat(prompt("Enter speed"));
+    var time = distance/speed;
+    var price;
+    if (speed > 60 ) {
+  // if the speed is over 60 reduce mpg by 2
+    var mpg = (speed % 60 * 2);
+    var reduced_mpg = fuel -  mpg;
+    price = (distance/reduced_mpg)*costPerGallon;
+    }
+
+    else {
+        price = (distance/fuel)*costPerGallon;
+      }
+      alert("The price is £ " + price +"\n" + "duration of the trip " + time )
+}
