@@ -1,0 +1,16 @@
+"people":[{
+"person1" : {
+    "name": "Mhaventhan",
+    "age": 23,
+    "employed": true,
+    "friends": ["Hussin", "Oceone"]
+},
+  "person2" : {
+    "name": "Hussin",
+    "age": 23,
+    "employed": true,
+    "friends": ["Mhaventhan", "Oceone"]
+
+  }
+
+}]
